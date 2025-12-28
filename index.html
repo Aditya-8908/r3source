@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love Bhavya ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            overflow-x: hidden;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .page.active {
+            display: flex;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px) brightness(0.5);
+            z-index: -1;
+        }
+
+        .content {
+            text-align: center;
+            color: #fff;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(255, 182, 193, 0.3);
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 192, 203, 0.8);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .name {
+            font-size: 3.5em;
+            color: #ffb6c1;
+            margin: 20px 0;
+            text-shadow: 0 0 30px rgba(255, 182, 193, 0.9);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .message {
+            font-size: 1.5em;
+            line-height: 1.8;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ff6b9d, #ffc3a0);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+            font-family: 'Georgia', serif;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, #ff6b9d, #ffc3a0);
+            font-size: 1.5em;
+            padding: 20px 60px;
+        }
+
+        .btn-no {
+            background: linear-gradient(135deg, #888, #aaa);
+            font-size: 1em;
+            padding: 10px 30px;
+            position: absolute;
+        }
+
+        .hearts {
+            font-size: 2em;
+            margin: 20px 0;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        .flower {
+            position: fixed;
+            font-size: 2.5em;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .countdown {
+            font-size: 2.5em;
+            color: #ffb6c1;
+            margin: 30px 0;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 182, 193, 0.9);
+        }
+
+        .countdown-label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ffc3a0;
+        }
+
+        .love-reasons {
+            text-align: left;
+            font-size: 1.3em;
+            line-height: 2;
+            margin: 20px 0;
+        }
+
+        .love-reasons li {
+            margin: 15px 0;
+            animation: slideIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(255, 192, 203, 0.8);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255, 192, 203, 1), 0 0 40px rgba(255, 192, 203, 0.8);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            50% {
+                transform: translateY(-40px) rotate(-5deg);
+            }
+            75% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .photo-frame {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 5px solid #ffb6c1;
+            box-shadow: 0 0 30px rgba(255, 182, 193, 0.6);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .name { font-size: 2.5em; }
+            .message { font-size: 1.2em; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="bg"></div>
+
+    <!-- Page 1: Welcome -->
+    <div class="page active" id="page1">
+        <div class="content">
+            <h1>🎊 Happy New Year 2026
+                and Happy 2 Month Anniversary 🎊</h1>
+            <div class="name">My Cute Tantrum Thrower</div>
+            <div class="hearts">💕 ❤️ 💕</div>
+            <div class="message">
+                I Made Something Special For My Cute Little PANDA <br>
+                Click to see! 💖
+            </div>
+            <button class="btn" onclick="goToPage(2)">Open Your Gift 🎁</button>
+        </div>
+    </div>
+
+    <!-- Page 2: Photo & Anniversary -->
+    <div class="page" id="page2">
+        <div class="content">
+            <h1>2 Months Together! 💕</h1>
+            <div class="photo-frame">
+                <img id="couplePhoto" src="" alt="Us">
+            </div>
+            <div class="countdown-label">We've been together for:</div>
+            <div class="countdown" id="countdown">2 Months</div>
+            <div class="message">
+                Every Single moment with you feels like magic ✨
+                A Type Of Magic that I never knew existed until I met you.
+                Thank You for being my everything. 🥰
+                (dont crashout just enjoy mwahhhh)
+            </div>
+            <button class="btn" onclick="goToPage(3)">Continue 💖</button>
+        </div>
+    </div>
+
+    <!-- Page 3: Do You Love Me? -->
+    <div class="page" id="page3">
+        <div class="content">
+            <h1>Quick/Trick Question... 🥰</h1>
+            <div class="message" style="font-size: 2em; margin: 40px 0;">
+                Do you love me Babe? 💕
+                (hehehehehehehehehehhe)
+            </div>
+            <div style="position: relative; height: 200px; width: 100%;">
+                <button class="btn btn-yes" onclick="goToPage(4)">Yes! ❤️</button>
+                <button class="btn btn-no" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: para -->
+    <div class="page" id="page4">
+        <div class="content">
+            <div class="message" style="font-size: 1.4em; line-height: 2; margin: 40px 20px;">
+               so here i am writing for you my love... so jan 1 ,2026 huh ?
+
+               new beginnings as new year, happy new year my love 😋😘...
+               but alsooooo it's OUR 2ND MONTH ANNIVERSARY LESSSSSOGOGOGOGOGOGO YAYAYAYAYAY😍😍😍😍🥰 🧿 
+               IM SOO HAPPY.... yayayayay... 
+               times moving soo fast it was like yesterday we celebrated our 1st month and 
+               tdy it's 2 month anniversary like wowowow i mean i am having the best time with you love its soo perfect 
+               i just love the connection we have i hope we never break it or ruin this because 
+               you are the best thing that has happened to me this year and you are the only thing that is going good i just love us... 
+               i hope we stay strong and overcome all problems we face in the future together... 
+               i love you soo sooo much bhavya you mean everything to me... 
+               sure we both have made many mistakes but the best thing is we forgave eachother and we stood strong together and faced 
+               everything and we will continue to do this together 🫶🏻....sure i was a asshole i did somethings in the past which has deeply hurt you
+               and i hate myself for that but thank you for forgiving me and giving me another chance to prove myself to you... i hope you have forgiven me 
+               and left it all in the past (and as we decided right babe after nov 1 🧿) i love you soo much thank you.... 
+               I love everything about you, i fall in love with each of your imperfections it's just soo cute and beautiful.... 
+               and the way you calm me down and the way yu understand me is sooo good and they way you understood me and calmed me down and 
+               gave me reassurance when i was at my lowest is something i will never forget and always be grateful for....
+               you will always have a special place in my heart for that....and you are my PANDAADADADADA PANDA PANDA PANDA PANDA PANDAADADADADA
+               you are the best girlfriend bhavya thank you for making me feel this way and not giving up on me 
+               thank you soo much for everything my love I am soo Greatful for you and your efforts 🥹🫶🏻 i
+                hope we never change and if we do have to I wish we get more mature and love each other more deeply 🥹🧿.... 
+                and after seeing everything please tell me how you felt  FULL EXPERIENCE I NEED 🧿🥰... 
+                this only work i was doing surprise i didn't wanna tell you hehehehehee muahhh... 
+                i love you soo much my cutieeee muahahahahahahah yayayayayayaya we are the bestttt🧿🫶🏻🥰🫶🏻🥰🥹🥹🫶🏻🧿🫶🏻🥰🥹........................
+                     FOREVER AND EVER BABE🥹🫶🏻🧿 
+                
+            </div>
+            <button class="btn" onclick="goToPage(5)">Continue 💖</button>
+        </div>
+    </div>
+    <!-- Page 5: New inserted page (recsbg) -->
+    <div class="page" id="page5">
+        <div class="content">
+            <h1>A Little Something I Recorded For You 💌
+                RECS
+            </h1>
+            <div class="hearts">💌🎵✨</div>
+            <div class="message">
+                <br><br>
+                So Here Are Some Voice Recordings I Made Just For You My Love 🥰🧿
+            </div>
+                <div style="margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; align-items:center;">
+                    <!-- Voice buttons -->
+                            <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+                                <button class="btn" id="mysweetBtn" onclick="toggleVoice('mysweet')">Play MySweet ▶️</button>
+                                <input id="mysweetSeek" type="range" min="0" max="100" value="0" style="width:160px;" />
+                            </div>
+                            <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+                                <button class="btn" id="msgvrBtn" onclick="toggleVoice('msgvr')">Play Msg ▶️</button>
+                                <input id="msgvrSeek" type="range" min="0" max="100" value="0" style="width:160px;" />
+                            </div>
+
+                    <!-- My IRIS player: controls the main background audio (iris) -->
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+                        <div style="display:flex; gap:8px; align-items:center;">
+                            <button class="btn" id="myIrisBtn" onclick="toggleMyIris()">Play My IRIS ▶️</button>
+                            <div style="font-size:0.9em; color:#fff;"></div>
+                        </div>
+                        <input id="myIrisSeek" type="range" min="0" max="100" value="0" style="width:220px;" />
+                    </div>
+
+                    <button class="btn" id="audioToggleBtn" onclick="toggleAudio()">Play ▶️</button>
+                    <button class="btn" onclick="goToPage(6)">Continue 💖</button>
+                </div>
+        </div>
+    </div>
+
+    <!-- Page 6: Final Message (was page5) -->
+    <div class="page" id="page6">
+        <div class="content">
+            <h1>Here's To Us! 🥂</h1>
+            <div class="hearts">💕 ❤️ 💖 ❤️ 💕</div>
+            <div class="message">
+                Happy New Year, my love!<br><br>
+                Thank you for these amazing 2 months.<br>
+                You've made every day brighter.<br><br>
+                Here's to many more beautiful moments,<br>
+                endless laughter, and a wonderful year ahead!<br><br>
+                I love you so much Bhavya! 💖✨
+            </div>
+            <div class="hearts">🎊 🎉 🎊</div>
+            <button class="btn" onclick="goToPage(7)">Next 🧿</button>
+        </div>
+    </div>
+
+    <!-- Page 7: Evil Eye / Restart (was page6) -->
+    <div class="page" id="page7">
+        <div class="content">
+            <h1>no risks can be taken love</h1>
+            <div class="message" style="font-size: 1.6em; line-height:1.4;">
+                <!-- Background contains many evil-eye emojis; this text sits over them -->
+                Thank you for being my safe place 
+                Forever and Ever BABE🥹🫶🏻.🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿🧿
+            </div>
+            <div class="hearts">✨ ✨ ✨</div>
+            <button class="btn" onclick="goToPage(1)">Restart 🔄</button>
+        </div>
+    </div>
+
+    <script>
+        // Elements
+        const bgElement = document.getElementById('bg');
+        const photoElement = document.getElementById('couplePhoto');
+
+        // Audio elements (separate elements per track so each has its own seek/control)
+        const audioElement = document.createElement('audio'); // iris (background)
+        audioElement.id = 'irisAudio';
+        audioElement.preload = 'auto';
+        audioElement.loop = true; // keep playing across pages by default
+        audioElement.style.display = 'none';
+        document.body.appendChild(audioElement);
+
+        const myIrisElement = document.createElement('audio'); // new myiris track (user-supplied)
+        myIrisElement.id = 'myIrisAudio';
+        myIrisElement.preload = 'auto';
+        myIrisElement.style.display = 'none';
+        document.body.appendChild(myIrisElement);
+
+        const mysweetAudio = document.createElement('audio');
+        mysweetAudio.id = 'mysweetAudio';
+        mysweetAudio.preload = 'auto';
+        mysweetAudio.style.display = 'none';
+        document.body.appendChild(mysweetAudio);
+
+        const msgvrAudio = document.createElement('audio');
+        msgvrAudio.id = 'msgvrAudio';
+        msgvrAudio.preload = 'auto';
+        msgvrAudio.style.display = 'none';
+        document.body.appendChild(msgvrAudio);
+
+        // store loaded object URLs for files discovered via fetch
+        const audioUrls = {};
+
+        // Helper to map a logical name to its audio element
+        function getAudioElementByName(name) {
+            switch (name) {
+                case 'iris': return audioElement;
+                case 'myiris': return myIrisElement;
+                case 'mysweet': return mysweetAudio;
+                case 'msgvr': return msgvrAudio;
+                default: return null;
+            }
+        }
+
+        // Pause and reset all audio elements except the given name (or all if null)
+        function stopAllExcept(allowName) {
+            const names = ['iris','myiris','mysweet','msgvr'];
+            for (const n of names) {
+                if (n === allowName) continue;
+                const el = getAudioElementByName(n);
+                if (el && !el.paused) {
+                    try { el.pause(); } catch(e) {}
+                    try { el.currentTime = 0; } catch(e) {}
+                }
+            }
+        }
+
+        // Mapping of logical names -> filenames (without extension).
+        // Assumption: your files are named firstbg.jpg, bgmain.jpg, mainpic.jpg, funbg.jpg, herbg.jpg
+        // The loader will try .jpg, .jpeg, .png, .webp in that order.
+        const imageMap = {
+            firstbg: 'firstbg', // page1 background
+            bgmain: 'bgmain',   // page2 background
+            mainpic: 'mainpic', // page2 circular photo
+            funbg: 'funbg',     // page3 background
+            lastsecbg: 'lastsecbg', // page6 (second-to-last) background after insertion
+            herbg: 'herbg',      // page7 background (used as fallback if desired)
+            recsbg: 'recsbg'     // new page5 background (requested)
+        };
+
+        // object URLs stored here after successful load
+        const urls = {};
+
+        async function tryFetchImage(name) {
+            const exts = ['.jpg', '.jpeg', '.png', '.webp'];
+            for (const ext of exts) {
+                try {
+                    const resp = await fetch(`./${name}${ext}`);
+                    if (resp.ok) {
+                        const blob = await resp.blob();
+                        return URL.createObjectURL(blob);
+                    }
+                } catch (e) {
+                    // fetch may fail on file:// in some browsers — continue trying
+                }
+            }
+            return null;
+        }
+
+        // Try fetching an audio file with common extensions. Returns object URL or null.
+        async function tryFetchAudio(name) {
+            const exts = ['.mp3', '.ogg', '.wav', '.m4a'];
+            for (const ext of exts) {
+                try {
+                    const resp = await fetch(`./${name}${ext}`);
+                    if (resp.ok) {
+                        const blob = await resp.blob();
+                        return URL.createObjectURL(blob);
+                    }
+                } catch (e) {
+                    // ignore and try next
+                }
+            }
+            return null;
+        }
+
+        // Preload all images in parallel
+        async function preloadAllImages() {
+            const names = Array.from(new Set(Object.values(imageMap)));
+            await Promise.all(names.map(async (n) => {
+                const url = await tryFetchImage(n);
+                if (url) urls[n] = url;
+            }));
+
+            // also attempt to preload background audio 'iris' (tries common extensions)
+            preloadAudio();
+
+            // Apply initial background for the active page (page1 by default)
+            const active = document.querySelector('.page.active');
+            if (active) {
+                const id = active.id || 'page1';
+                const pageNum = parseInt(id.replace('page', ''), 10) || 1;
+                setBackgroundForPage(pageNum);
+            }
+        }
+
+        // Preload audio file 'iris' and set it as source for audioElement if found.
+        async function preloadAudio() {
+            const audioUrl = await tryFetchAudio('iris');
+            if (audioUrl) {
+                audioElement.src = audioUrl;
+                audioElement.volume = 0.6;
+                audioElement.loop = true;
+                try { await audioElement.play(); } catch(e) {}
+            }
+
+            // also try to preload voice recordings (mysweet, msgvr) and myiris
+            const v1 = await tryFetchAudio('mysweet');
+            if (v1) {
+                audioUrls['mysweet'] = v1;
+                mysweetAudio.src = v1;
+            }
+            const v2 = await tryFetchAudio('msgvr');
+            if (v2) {
+                audioUrls['msgvr'] = v2;
+                msgvrAudio.src = v2;
+            }
+            const m = await tryFetchAudio('myiris');
+            if (m) {
+                audioUrls['myiris'] = m;
+                myIrisElement.src = m;
+            }
+        }
+
+        // Ensure audio plays once the user interacts (common browsers block autoplay until gesture).
+        let _audioStarted = false;
+        function tryStartAudioOnGesture() {
+            if (_audioStarted) return;
+            _audioStarted = true;
+            // attempt to play (if audio was not blocked)
+            audioElement.play().catch(() => {});
+            document.removeEventListener('click', tryStartAudioOnGesture);
+            document.removeEventListener('keydown', tryStartAudioOnGesture);
+        }
+        document.addEventListener('click', tryStartAudioOnGesture);
+        document.addEventListener('keydown', tryStartAudioOnGesture);
+
+        // Audio control helpers for the Play/Pause button on page5
+        function updateAudioButton() {
+            const btn = document.getElementById('audioToggleBtn');
+            if (!btn) return;
+            if (!audioElement.src) {
+                btn.textContent = 'No audio';
+                btn.disabled = true;
+                return;
+            }
+            if (audioElement.paused) {
+                btn.textContent = 'Play ▶️';
+                btn.classList.remove('playing');
+                btn.disabled = false;
+            } else {
+                btn.textContent = 'Pause ⏸️';
+                btn.classList.add('playing');
+                btn.disabled = false;
+            }
+        }
+
+        async function toggleAudio() {
+            // If audio not loaded yet, attempt to preload (helps if user clicked before preload finished)
+            if (!audioElement.src) {
+                await preloadAudio();
+            }
+
+            if (audioElement.paused) {
+                try { await audioElement.play(); } catch (e) { /* ignore */ }
+            } else {
+                audioElement.pause();
+            }
+            updateAudioButton();
+        }
+
+        // Keep the button state in sync with actual audio events
+        audioElement.addEventListener('play', updateAudioButton);
+        audioElement.addEventListener('pause', updateAudioButton);
+    // Also keep My IRIS UI in sync
+    audioElement.addEventListener('timeupdate', updateMyIrisUI);
+    audioElement.addEventListener('loadedmetadata', updateMyIrisUI);
+    audioElement.addEventListener('play', updateMyIrisUI);
+    audioElement.addEventListener('pause', updateMyIrisUI);
+
+        // Voice playback helpers (mysweet, msgvr) using separate elements
+        function updateVoiceButtons() {
+            const b1 = document.getElementById('mysweetBtn');
+            const b2 = document.getElementById('msgvrBtn');
+            const s1 = document.getElementById('mysweetSeek');
+            const s2 = document.getElementById('msgvrSeek');
+            // mysweet
+            if (b1) {
+                if (!audioUrls['mysweet'] && !mysweetAudio.src) {
+                    b1.textContent = 'No MySweet';
+                    b1.disabled = true;
+                } else if (!mysweetAudio.paused) {
+                    b1.textContent = 'Pause MySweet ⏸️';
+                    b1.disabled = false;
+                } else {
+                    b1.textContent = 'Play MySweet ▶️';
+                    b1.disabled = false;
+                }
+            }
+            // msgvr
+            if (b2) {
+                if (!audioUrls['msgvr'] && !msgvrAudio.src) {
+                    b2.textContent = 'No Msg';
+                    b2.disabled = true;
+                } else if (!msgvrAudio.paused) {
+                    b2.textContent = 'Pause Msg ⏸️';
+                    b2.disabled = false;
+                } else {
+                    b2.textContent = 'Play Msg ▶️';
+                    b2.disabled = false;
+                }
+            }
+            // update seeks
+            if (s1) {
+                if (mysweetAudio.duration && !isNaN(mysweetAudio.duration)) {
+                    s1.max = Math.floor(mysweetAudio.duration);
+                    s1.value = Math.floor(mysweetAudio.currentTime || 0);
+                    s1.disabled = false;
+                } else {
+                    s1.disabled = true;
+                }
+            }
+            if (s2) {
+                if (msgvrAudio.duration && !isNaN(msgvrAudio.duration)) {
+                    s2.max = Math.floor(msgvrAudio.duration);
+                    s2.value = Math.floor(msgvrAudio.currentTime || 0);
+                    s2.disabled = false;
+                } else {
+                    s2.disabled = true;
+                }
+            }
+        }
+
+        async function toggleVoice(name) {
+            const el = getAudioElementByName(name);
+            if (!el) return;
+
+            // If not preloaded, try to fetch now and set src
+            if (!el.src) {
+                const url = await tryFetchAudio(name);
+                if (url) {
+                    audioUrls[name] = url;
+                    el.src = url;
+                }
+            }
+            if (!el.src) { updateVoiceButtons(); return; }
+
+            // Stop other audios
+            stopAllExcept(name);
+
+            if (el.paused) {
+                try { await el.play(); } catch (e) { /* ignore */ }
+            } else {
+                el.pause();
+                try { el.currentTime = 0; } catch(e) {}
+            }
+            updateVoiceButtons();
+        }
+
+        // Keep buttons in sync with voice audio events
+        mysweetAudio.addEventListener('play', () => { stopAllExcept('mysweet'); updateVoiceButtons(); });
+        mysweetAudio.addEventListener('pause', updateVoiceButtons);
+        mysweetAudio.addEventListener('timeupdate', updateVoiceButtons);
+        mysweetAudio.addEventListener('loadedmetadata', updateVoiceButtons);
+
+        msgvrAudio.addEventListener('play', () => { stopAllExcept('msgvr'); updateVoiceButtons(); });
+        msgvrAudio.addEventListener('pause', updateVoiceButtons);
+        msgvrAudio.addEventListener('timeupdate', updateVoiceButtons);
+        msgvrAudio.addEventListener('loadedmetadata', updateVoiceButtons);
+
+        // --- My IRIS player helpers (controls the myIrisElement)
+        function updateMyIrisUI() {
+            const btn = document.getElementById('myIrisBtn');
+            const seek = document.getElementById('myIrisSeek');
+            if (!btn && !seek) return;
+            if (!myIrisElement.src) {
+                if (btn) { btn.textContent = 'No My IRIS'; btn.disabled = true; }
+                if (seek) { seek.disabled = true; }
+                return;
+            }
+            if (btn) {
+                if (myIrisElement.paused) {
+                    btn.textContent = 'Play My IRIS ▶️';
+                } else {
+                    btn.textContent = 'Pause My IRIS ⏸️';
+                }
+                btn.disabled = false;
+            }
+            if (seek) {
+                if (myIrisElement.duration && !isNaN(myIrisElement.duration)) {
+                    seek.max = Math.floor(myIrisElement.duration);
+                    seek.value = Math.floor(myIrisElement.currentTime || 0);
+                    seek.disabled = false;
+                } else {
+                    seek.disabled = true;
+                }
+            }
+        }
+
+        async function toggleMyIris() {
+            // When user requests myiris playback via My IRIS, stop others
+            stopAllExcept('myiris');
+            // If not already loaded, try to fetch
+            if (!myIrisElement.src) {
+                const url = await tryFetchAudio('myiris');
+                if (url) { audioUrls['myiris'] = url; myIrisElement.src = url; }
+            }
+            if (!myIrisElement.src) return;
+            if (myIrisElement.paused) {
+                try { await myIrisElement.play(); } catch (e) { /* ignore */ }
+            } else {
+                myIrisElement.pause();
+                try { myIrisElement.currentTime = 0; } catch(e) {}
+            }
+            updateMyIrisUI();
+        }
+
+        // Seek handler for My IRIS
+        const myIrisSeekEl = document.getElementById('myIrisSeek');
+        if (myIrisSeekEl) {
+            myIrisSeekEl.addEventListener('input', (e) => {
+                const v = Number(e.target.value);
+                if (!isNaN(v) && myIrisElement.duration) {
+                    myIrisElement.currentTime = v;
+                }
+            });
+        }
+
+        // Attach seek handlers for mysweet/msgvr
+        const mysweetSeekEl = document.getElementById('mysweetSeek');
+        if (mysweetSeekEl) {
+            mysweetSeekEl.addEventListener('input', (e) => {
+                const v = Number(e.target.value);
+                if (!isNaN(v) && mysweetAudio.duration) {
+                    mysweetAudio.currentTime = v;
+                }
+            });
+        }
+        const msgvrSeekEl = document.getElementById('msgvrSeek');
+        if (msgvrSeekEl) {
+            msgvrSeekEl.addEventListener('input', (e) => {
+                const v = Number(e.target.value);
+                if (!isNaN(v) && msgvrAudio.duration) {
+                    msgvrAudio.currentTime = v;
+                }
+            });
+        }
+
+        // My IRIS and voice audio event wiring to keep UI in sync and stop others when one plays
+        audioElement.addEventListener('play', () => { stopAllExcept('iris'); updateMyIrisUI(); updateAudioButton(); });
+        audioElement.addEventListener('pause', () => { updateMyIrisUI(); updateAudioButton(); });
+        audioElement.addEventListener('timeupdate', updateMyIrisUI);
+        audioElement.addEventListener('loadedmetadata', updateMyIrisUI);
+
+        myIrisElement.addEventListener('play', () => { stopAllExcept('myiris'); updateMyIrisUI(); });
+        myIrisElement.addEventListener('pause', () => { updateMyIrisUI(); });
+        myIrisElement.addEventListener('timeupdate', () => {
+            const el = document.getElementById('myIrisSeek');
+            if (el && myIrisElement.duration) el.value = Math.floor(myIrisElement.currentTime || 0);
+        });
+        myIrisElement.addEventListener('loadedmetadata', () => {
+            const el = document.getElementById('myIrisSeek');
+            if (el && myIrisElement.duration) el.max = Math.floor(myIrisElement.duration);
+        });
+
+        mysweetAudio.addEventListener('play', () => { stopAllExcept('mysweet'); updateVoiceButtons(); });
+        mysweetAudio.addEventListener('pause', updateVoiceButtons);
+        msgvrAudio.addEventListener('play', () => { stopAllExcept('msgvr'); updateVoiceButtons(); });
+        msgvrAudio.addEventListener('pause', updateVoiceButtons);
+
+        // ensure UI is initialized after page loads
+        window.addEventListener('load', () => {
+            updateAudioButton();
+            updateMyIrisUI();
+            updateVoiceButtons();
+        });
+
+        function svgPlaceholder(textSmall, textLarge) {
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600">
+                <rect width="100%" height="100%" fill="#ff9bb3"/>
+                <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#fff">${textLarge}</text>
+                <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#fff">${textSmall}</text>
+            </svg>`;
+            return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+        }
+
+        // Set background/photo for a specific page number
+        function setBackgroundForPage(pageNum) {
+            let bgUrl = null;
+            switch (pageNum) {
+                case 1:
+                    bgUrl = urls[imageMap.firstbg] || null;
+                    break;
+                case 2:
+                    bgUrl = urls[imageMap.bgmain] || null;
+                    break;
+                case 3:
+                    bgUrl = urls[imageMap.funbg] || null;
+                    break;
+                case 4:
+                    // use herbg for page4 as requested
+                    bgUrl = urls[imageMap.herbg] || null;
+                    break;
+                case 5:
+                    // inserted page uses recsbg per your request
+                    bgUrl = urls[imageMap.recsbg] || null;
+                    break;
+                case 6:
+                    // second-to-last page (previously page5) uses lastsecbg
+                    bgUrl = urls[imageMap.lastsecbg] || null;
+                    break;
+                case 7:
+                    // last page will use an emoji background (generated), but keep herbg as fallback
+                    bgUrl = urls[imageMap.herbg] || null;
+                    break;
+                default:
+                    bgUrl = null;
+            }
+
+            if (pageNum === 2) {
+                // set the circular photo for page 2
+                const photoUrl = urls[imageMap.mainpic];
+                if (photoUrl) {
+                    photoElement.src = photoUrl;
+                } else {
+                    photoElement.src = svgPlaceholder('Place mainpic.jpg next to index.html', 'No photo found');
+                }
+            }
+
+            // Helper: generate a full-viewport SVG that tiles many evil-eye emojis in a grid
+            function generateEvilEyeSVG(cols = 12, rows = 9) {
+                const w = Math.max(window.innerWidth, 300);
+                const h = Math.max(window.innerHeight, 300);
+                const cellW = Math.ceil(w / cols);
+                const cellH = Math.ceil(h / rows);
+                const fontSize = Math.floor(Math.min(cellW, cellH) * 0.8);
+
+                let svg = `<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}' viewBox='0 0 ${w} ${h}'>`;
+                svg += `<rect width='100%' height='100%' fill='transparent'/>`;
+
+                for (let r = 0; r < rows; r++) {
+                    for (let c = 0; c < cols; c++) {
+                        const x = c * cellW + cellW / 2;
+                        const y = r * cellH + cellH / 2;
+                        svg += `<text x='${x}' y='${y}' font-size='${fontSize}' text-anchor='middle' dominant-baseline='central'>🧿</text>`;
+                    }
+                }
+
+                svg += `</svg>`;
+                return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+            }
+
+            // Special handling: when showing page 3 (funbg) we position it to the left and
+            // do a single flip animation so it "flips to left once" as requested.
+            if (pageNum === 3) {
+                if (bgUrl) {
+                    bgElement.style.backgroundImage = `url(${bgUrl})`;
+                    bgElement.style.backgroundPosition = 'left center';
+                    // quick flip animation (mirror) once
+                    bgElement.style.transition = 'transform 0.6s ease';
+                    bgElement.style.transform = 'scaleX(-1)';
+                    setTimeout(() => {
+                        bgElement.style.transform = '';
+                        // clear transition after animation
+                        setTimeout(() => bgElement.style.transition = '', 100);
+                    }, 650);
+                } else {
+                    bgElement.style.backgroundImage = 'linear-gradient(135deg,#ff9bb3,#ffd1a9)';
+                    bgElement.style.backgroundPosition = 'left center';
+                }
+            } else if (pageNum === 7) {
+                // For page 7: set the overall page background to black and place an emoji overlay BEHIND the content.
+                bgElement.style.backgroundImage = 'none';
+                bgElement.style.backgroundRepeat = 'no-repeat';
+                bgElement.style.backgroundSize = 'cover';
+                bgElement.style.backgroundPosition = 'center';
+                // set the background color to black
+                bgElement.style.backgroundColor = '#000000';
+                bgElement.style.filter = 'none';
+
+                // Keep a white-looking content box but make it semi-transparent so emojis show through
+                const page7Content = document.querySelector('#page7 .content');
+                if (page7Content) {
+                    // semi-transparent white so it still reads as a "white box" but allows emoji visibility
+                    page7Content.style.background = 'rgba(255,255,255,0.12)';
+                    page7Content.style.border = '2px solid rgba(255,255,255,0.9)';
+                    // make text white so it reads over the dark/emoji background
+                    page7Content.style.color = '#ffffff';
+                    page7Content.style.boxShadow = '0 8px 32px rgba(0,0,0,0.15)';
+                    page7Content.style.backdropFilter = 'blur(6px)';
+                }
+
+                // Create a denser full-page emoji overlay that sits behind content (z-index: 0)
+                createEmojiOverlay(600, 36, 0); // count, fontSize, zIndex
+                // Ensure audio is playing while user looks at the last page
+                audioElement.play().catch(() => {});
+            } else {
+                // reset any special positioning/transform for other pages
+                bgElement.style.backgroundPosition = 'center';
+                bgElement.style.transition = '';
+                bgElement.style.transform = '';
+                // restore default filter
+                bgElement.style.filter = 'blur(3px) brightness(0.5)';
+                bgElement.style.backgroundRepeat = 'no-repeat';
+                bgElement.style.backgroundSize = 'cover';
+
+
+                if (bgUrl) {
+                    bgElement.style.backgroundImage = `url(${bgUrl})`;
+                } else {
+                    // graceful fallback if specific image isn't available
+                    bgElement.style.backgroundImage = 'linear-gradient(135deg,#ff9bb3,#ffd1a9)';
+                }
+
+                // clear any temporary backgroundColor applied for the last page
+                bgElement.style.backgroundColor = '';
+
+                // restore content styling in case we left the last page previously
+                const page7Content = document.querySelector('#page7 .content');
+                if (page7Content) {
+                    page7Content.style.background = 'rgba(0, 0, 0, 0.6)';
+                    page7Content.style.boxShadow = '0 8px 32px rgba(255, 182, 193, 0.3)';
+                    page7Content.style.color = '#ffffff';
+                }
+                // remove emoji overlay if present
+                removeEmojiOverlay();
+            }
+        }
+
+        // Emoji overlay helpers
+        function createEmojiOverlay(count = 200, fontSize = 48, zIndex = 0) {
+            removeEmojiOverlay();
+            const overlay = document.createElement('div');
+            overlay.id = 'emojiOverlay';
+            overlay.style.position = 'fixed';
+            overlay.style.left = '0';
+            overlay.style.top = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.pointerEvents = 'none';
+            overlay.style.zIndex = String(zIndex);
+            overlay.style.display = 'flex';
+            overlay.style.flexWrap = 'wrap';
+            overlay.style.alignContent = 'flex-start';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.overflow = 'hidden';
+            overlay.style.padding = '8px';
+
+            for (let i = 0; i < count; i++) {
+                const span = document.createElement('span');
+                span.textContent = '🧿';
+                span.style.fontSize = fontSize + 'px';
+                span.style.margin = '4px';
+                span.style.lineHeight = '1';
+                overlay.appendChild(span);
+            }
+
+            document.body.appendChild(overlay);
+        }
+
+        function removeEmojiOverlay() {
+            const existing = document.getElementById('emojiOverlay');
+            if (existing) existing.remove();
+        }
+
+        // (no one-time jumping overlay here) the persistent emoji overlay is created only on the last page
+
+    // Track current page so we can detect a restart from the last page -> page1
+    let currentPage = 1;
+
+        // Page navigation
+        function goToPage(pageNum) {
+            const prev = currentPage;
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById('page' + pageNum);
+            if (target) target.classList.add('active');
+            currentPage = pageNum;
+            setBackgroundForPage(pageNum);
+
+            // no per-page burst (emoji overlay handled per-page in setBackgroundForPage)
+
+            // if user restarts (from the last page back to page 1) restart audio from beginning
+            const totalPages = document.querySelectorAll('.page').length;
+            if (prev === totalPages && pageNum === 1) {
+                try {
+                    audioElement.currentTime = 0;
+                    audioElement.play();
+                } catch (e) {
+                    // ignore if blocked; will start on next user gesture
+                }
+            }
+
+            if (pageNum === 4) {
+                animateReasons();
+            }
+        }
+
+        // Animate reasons list
+        function animateReasons() {
+            const reasons = document.querySelectorAll('.love-reasons li');
+            reasons.forEach((reason, index) => {
+                reason.style.animationDelay = (index * 0.3) + 's';
+            });
+        }
+
+        // Moving No button
+        function moveButton() {
+            const noBtn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - 200);
+            const y = Math.random() * 300;
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+
+            // Make button smaller
+            const currentSize = parseFloat(getComputedStyle(noBtn).fontSize);
+            if (currentSize > 10) {
+                noBtn.style.fontSize = (currentSize - 2) + 'px';
+                noBtn.style.padding = '8px 20px';
+            }
+        }
+
+        // Create floating flowers
+        function createFlower() {
+            const flowers = ['🌸', '🌺', '🌷', '🌹', '💐', '🌼', '🦋', '✨'];
+            const flower = document.createElement('div');
+            flower.className = 'flower';
+            flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+            flower.style.left = Math.random() * 100 + '%';
+            flower.style.top = Math.random() * 100 + '%';
+            flower.style.animationDelay = Math.random() * 3 + 's';
+            flower.style.animationDuration = (Math.random() * 4 + 4) + 's';
+            document.body.appendChild(flower);
+        }
+
+        // Generate flowers
+        for (let i = 0; i < 20; i++) {
+            createFlower();
+        }
+
+        // Update countdown
+        function updateCountdown() {
+            const startDate = new Date('2024-11-01'); // Adjust to your actual start date (when you started dating)
+            const now = new Date();
+
+            // Calculate difference
+            let years = now.getFullYear() - startDate.getFullYear();
+            let months = now.getMonth() - startDate.getMonth();
+            let days = now.getDate() - startDate.getDate();
+
+            // Adjust if days are negative
+            if (days < 0) {
+                months--;
+                const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += lastMonth.getDate();
+            }
+
+            // Adjust if months are negative
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            // Build the display string
+            let countdownText = '';
+            if (months > 0) {
+                countdownText = `${months} Month${months !== 1 ? 's' : ''}`;
+                if (days > 0) {
+                    countdownText += ` & ${days} Day${days !== 1 ? 's' : ''}`;
+                }
+            } else {
+                countdownText = `${days} Day${days !== 1 ? 's' : ''}`;
+            }
+
+            document.getElementById('countdown').textContent = countdownText;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 60000); // Update every minute
+
+        // Click hearts effect
+        document.addEventListener('click', (e) => {
+            const heart = document.createElement('div');
+            heart.textContent = '❤️';
+            heart.style.position = 'fixed';
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            heart.style.fontSize = '2em';
+            heart.style.pointerEvents = 'none';
+            heart.style.animation = 'float 2s ease-out forwards';
+            heart.style.zIndex = '1000';
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 2000);
+        });
+
+        // Start preloading images
+        preloadAllImages();
+    </script>
+</body>
+</html>
